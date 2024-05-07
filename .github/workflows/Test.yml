@@ -9,7 +9,6 @@ jobs:
             - name: checkout repo
               uses: actions/checkout@v3
             
-
             - name: install node
               uses: actions/setup-node@v3
 
@@ -17,4 +16,4 @@ jobs:
               run: sudo npm supertest
 
               env:
-                test1: {{$github.secrets.test1}}
+                test1: ${{.secrets.test1}}
