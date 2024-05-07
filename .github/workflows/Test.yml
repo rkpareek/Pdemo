@@ -1,0 +1,20 @@
+name: test
+
+on: [push, fork]
+
+jobs:
+    node-app:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@v3
+            
+
+            - name: install node
+              uses: actions/setup-node@v3
+
+            - name: install dep
+              run: sudo npm supertest
+
+              env:
+                test1: {{$github.secrets.test1}}
