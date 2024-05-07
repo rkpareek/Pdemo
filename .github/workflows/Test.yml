@@ -13,7 +13,7 @@ jobs:
               uses: actions/setup-node@v3
 
             - name: install dep
-              run: sudo npm supertest
+              run: sudo npm install supertest
 
               env:
                 test1: ${{secrets.test1}}
