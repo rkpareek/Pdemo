@@ -16,4 +16,4 @@ jobs:
               run: sudo npm supertest
 
               env:
-                test1: ${{.secrets.test1}}
+                test1: ${{secrets.test1}}
